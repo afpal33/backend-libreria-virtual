@@ -13,7 +13,7 @@ El presente proyecto constituye el avance de backend para el proyecto librería 
 - [ ] Crear controladores
     - [x] Controlador busqueda Google books
     - [ ] Controlador usuario
-    - [ ] Controlador obtencion de precios Amazon
+    - [ ] Controlador obtencion de precios Amazon (en progreso)
 - [x] Crear configuración CORS
 - [ ] Crear mensajes de errores
 - [ ] Crear módulos de repositorios
