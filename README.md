@@ -7,7 +7,9 @@ El presente proyecto constituye el avance de backend para el proyecto librería 
     - [ ] Amazon
     - [ ] Google Books
 - [ ] Crear business logic
+    - [x] Google Book Services Search
 - [ ] Crear controladores
+    - [x] Controlador busqueda Google books
 - [x] Crear configuración CORS
 - [ ] Crear mensajes de errores
 - [ ] Crear módulos de repositorios
