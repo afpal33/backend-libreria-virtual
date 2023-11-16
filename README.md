@@ -4,12 +4,16 @@ El presente proyecto constituye el avance de backend para el proyecto librería 
 - [ ] Realizar sql file de la base de datos
 - [ ] Crear modelos
     - [ ] usuario
-    - [ ] Amazon
-    - [ ] Google Books
+    - [ ] Biblioteca
 - [ ] Crear business logic
     - [x] Google Book Services Search
+    - [ ] usuario
+    - [ ] biblioteca
+    - [ ] Amazon
 - [ ] Crear controladores
     - [x] Controlador busqueda Google books
+    - [ ] Controlador usuario
+    - [ ] Controlador Amazon
 - [x] Crear configuración CORS
 - [ ] Crear mensajes de errores
 - [ ] Crear módulos de repositorios
