@@ -1,7 +1,7 @@
 # Backend Librería virtual
 El presente proyecto constituye el avance de backend para el proyecto librería virtual, el cual provee un servicio que permite obtener libros de Google Books, así como la capacidad de obtener sus precios respectivos en Amazon.
 ## To Do:
-- [ ] Realizar sql file de la base de datos
+- [ ] Realizar sql file de la base de datos (En modificación)
 - [ ] Crear modelos
     - [ ] usuario
     - [ ] Biblioteca
@@ -9,11 +9,11 @@ El presente proyecto constituye el avance de backend para el proyecto librería 
     - [x] Google Book Services Search
     - [ ] usuario
     - [ ] biblioteca
-    - [ ] Amazon
+    - [ ] Amazon (En progreso)
 - [ ] Crear controladores
     - [x] Controlador busqueda Google books
     - [ ] Controlador usuario
-    - [ ] Controlador Amazon
+    - [ ] Controlador obtencion de precios Amazon
 - [x] Crear configuración CORS
 - [ ] Crear mensajes de errores
 - [ ] Crear módulos de repositorios
