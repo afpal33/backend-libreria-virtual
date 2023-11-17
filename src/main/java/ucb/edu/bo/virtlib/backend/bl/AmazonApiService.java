@@ -24,16 +24,14 @@ public class AmazonApiService {
     }
 
     public String getProductPrice(String productName) {
-        // Construir la URL de la API de Amazon
         String url = UriComponentsBuilder.fromUriString(amazonApiUrl)
                 .queryParam("ProductName", productName)
                 .build().toUriString();
 
-        // Realizar la solicitud GET a la API de Amazon
-        // Aquí deberías manejar la respuesta y extraer el precio
+        // manejar la respuesta y extraer el precio
         String response = restTemplate.getForObject(url, String.class);
 
-        // Supongamos que la respuesta contiene el precio
+        // si la respuesta contiene el precio
         String price = extractPriceFromResponse(response);
 
         return "Precio del producto " + productName + ": " + price;
@@ -42,7 +40,7 @@ public class AmazonApiService {
     private String extractPriceFromResponse(String response) {
         // Lógica para extraer el precio de la respuesta
         // Esto dependerá del formato de la respuesta de la API de Amazon
-        // Aquí solo es un ejemplo simple
+        // ejemplo
         return "$XX.XX";
     }
 }
