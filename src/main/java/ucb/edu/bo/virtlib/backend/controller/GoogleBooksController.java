@@ -6,12 +6,12 @@ import ucb.edu.bo.virtlib.backend.bl.GoogleBooksService;
 
 @RestController
 @RequestMapping("/api/v1/google-books")
-public class BooksController {
+public class GoogleBooksController {
 
     private final GoogleBooksService googleBooksService;
 
     @Autowired
-    public BooksController(GoogleBooksService googleBooksService) {
+    public GoogleBooksController(GoogleBooksService googleBooksService) {
         this.googleBooksService = googleBooksService;
     }
 

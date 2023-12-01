@@ -17,12 +17,7 @@ public class LibreriaController {
     @Autowired
     private LibreriaService libreriaService;
 
-    @GetMapping("/all")
-    public ResponseEntity<List<LibreriaModel>> getAllLibrosEnLibreria() {
-        List<LibreriaModel> librosEnLibreria = libreriaService.getAllLibrosEnLibreria();
-        return new ResponseEntity<>(librosEnLibreria, HttpStatus.OK);
-    }
-
+    //Obtener libro por id
     @GetMapping("/{libroId}")
     public ResponseEntity<LibreriaModel> getLibroEnLibreriaById(@PathVariable Long libroId) {
         Optional<LibreriaModel> libroEnLibreria = libreriaService.getLibroEnLibreriaById(libroId);
@@ -30,12 +25,14 @@ public class LibreriaController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    //Eliminar libro por id
     @DeleteMapping("/{libroId}")
     public ResponseEntity<Void> borrarLibroEnLibreriaById(@PathVariable Long libroId) {
         libreriaService.borrarLibroEnLibreriaById(libroId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    //agregar libro a la libreria de usuario por id
     @PostMapping("/agregar")
     public ResponseEntity<LibreriaModel> agregarLibroALibreria(
             @RequestParam Long usuarioId,
