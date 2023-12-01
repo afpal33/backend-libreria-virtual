@@ -34,4 +34,10 @@ public class UserController {
         userService.borrarUsuarioById(userId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+    @PostMapping("/add")
+    public ResponseEntity<UserModel> addUsuario(@RequestBody UserModel usuario) {
+        // Puedes agregar validaciones u operaciones antes de guardar el usuario en la base de datos
+        UserModel nuevoUsuario = userService.addUsuario(usuario);
+        return new ResponseEntity<>(nuevoUsuario, HttpStatus.CREATED);
+    }
 }

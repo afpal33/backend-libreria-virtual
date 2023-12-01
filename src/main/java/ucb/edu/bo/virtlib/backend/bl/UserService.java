@@ -24,4 +24,9 @@ public class UserService {
     public void borrarUsuarioById(Long usuarioId) {
         userRepository.deleteById(usuarioId);
     }
+
+    public UserModel addUsuario(UserModel usuario) {
+        // Puedes agregar lógica adicional antes de guardar el usuario
+        return userRepository.save(usuario);
+    }
 }
