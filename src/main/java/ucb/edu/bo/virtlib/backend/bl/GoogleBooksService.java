@@ -14,7 +14,6 @@ import java.util.Optional;
 public class GoogleBooksService {
 
     private final RestTemplate restTemplate;
-    private final GoogleBookRepository googleBooksRepository;
 
     @Value("${google.books.api.url}")
     private String apiUrl;
@@ -23,9 +22,8 @@ public class GoogleBooksService {
     private String apiKey;
 
     @Autowired
-    public GoogleBooksService(RestTemplate restTemplate, GoogleBookRepository googleBooksRepository) {
+    public GoogleBooksService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        this.googleBooksRepository = googleBooksRepository;
     }
 
     public String searchBooks(String query) {
@@ -36,9 +34,5 @@ public class GoogleBooksService {
 
         return restTemplate.getForObject(url, String.class);
     }
-
-    public GoogleBooksModel getBookById(Long googleLibroId) {
-        Optional<GoogleBooksModel> optionalBook = googleBooksRepository.findById(googleLibroId);
-        return optionalBook.orElse(null);
-    }
 }
+
