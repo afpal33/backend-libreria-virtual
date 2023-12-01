@@ -16,4 +16,4 @@ El presente proyecto constituye el avance de backend para el proyecto librería 
     - [ ] Controlador obtencion de precios Amazon (en progreso)
 - [x] Crear configuración CORS
 - [ ] Crear mensajes de errores
-- [ ] Crear módulos de repositorios
+- [x] Crear módulos de repositorios
