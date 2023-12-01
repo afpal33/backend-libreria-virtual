@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long user_id;
 
     private String given_name;
     private String family_name;
@@ -23,7 +23,7 @@ public class UserModel {
     private String sub;
 
     public UserModel(Long id, String given_name, String family_name, String picture, String locale, LocalDateTime updated_at, String email, Integer email_verified, String sub) {
-        this.id = id;
+        this.user_id = user_id;
         this.given_name = given_name;
         this.family_name = family_name;
         this.picture = picture;
@@ -35,11 +35,11 @@ public class UserModel {
     }
 
     public Long getId() {
-        return id;
+        return user_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.user_id = user_id;
     }
 
     public String getGiven_name() {
