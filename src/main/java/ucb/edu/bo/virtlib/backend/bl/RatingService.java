@@ -24,4 +24,9 @@ public class RatingService {
     public void borrarRatingById(Long ratingId) {
         ratingRepository.deleteById(ratingId);
     }
+
+    public RatingModel agregarRating(Integer calificacion, String comentario, Long usuarioId) {
+        RatingModel nuevoRating = new RatingModel(null, calificacion, comentario, usuarioId);
+        return ratingRepository.save(nuevoRating);
+    }
 }

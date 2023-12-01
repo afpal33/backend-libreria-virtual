@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class LibreriaService {
+
     @Autowired
     private LibreriaRepository libreriaRepository;
 
@@ -17,11 +18,16 @@ public class LibreriaService {
         return libreriaRepository.findAll();
     }
 
-    public Optional<LibreriaModel> getLibroEnLibreriaById(Long libroId) {
-        return libreriaRepository.findById(libroId);
+    public Optional<LibreriaModel> getLibroEnLibreriaById(Long libreriaId) {
+        return libreriaRepository.findById(libreriaId);
     }
 
-    public void borrarLibroEnLibreriaById(Long libroId) {
-        libreriaRepository.deleteById(libroId);
+    public void borrarLibroEnLibreriaById(Long libreriaId) {
+        libreriaRepository.deleteById(libreriaId);
+    }
+
+    public LibreriaModel agregarLibroALibreria(Long usuarioId, Long libroPrecioId) {
+        LibreriaModel nuevaEntrada = new LibreriaModel(null, usuarioId, libroPrecioId);
+        return libreriaRepository.save(nuevaEntrada);
     }
 }
