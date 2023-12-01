@@ -25,8 +25,9 @@ public class RatingService {
         ratingRepository.deleteById(ratingId);
     }
 
-    public RatingModel agregarRating(Integer calificacion, String comentario, Long usuarioId) {
-        RatingModel nuevoRating = new RatingModel(null, calificacion, comentario, usuarioId);
+    public RatingModel agregarRating(RatingModel nuevoRating) {
         return ratingRepository.save(nuevoRating);
     }
+
+
 }
